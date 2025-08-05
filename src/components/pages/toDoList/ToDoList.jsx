@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import "./ToDoList.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setTodos, removeTodo } from "../../../redux/todoSlice";
 import { addToDone } from "../../../redux/doneSlice";
@@ -36,11 +37,24 @@ const TodoList = () => {
   return (
     <section id="todolist">
       <div className="container">
-        <div className="todolist">
-            <div className="todolist--list">
-                
-            </div>
-        </div>
+        <h2> Список задач</h2>
+
+        {todos.length === 0 ? (
+          <p style={{marginTop: "20px"}}>Нет задач</p>
+        ) : (
+          <div className="todolist">
+            {todos.map((el) => (
+              <div key={el.id} className="todolist--item">
+                <h3>{el.name}</h3>
+                <p>{el.comment}</p>
+                <div className="todolist--btns">
+                  <button onClick={() => handleDone(el)}>Done</button>
+                  <button onClick={() => handleCancel(el.id)}> Cancel</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
