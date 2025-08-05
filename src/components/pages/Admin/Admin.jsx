@@ -7,6 +7,10 @@ const Admin = () => {
   const [commet, setCommet] = useState("");
 
   async function addTask() {
+    if (!name || !commet) {
+      return alert("Заполните все поля!");
+    }
+
     const res = await axios.post(
       `https://68916c9b447ff4f11fbc8524.mockapi.io/todo/Commenta`,
       {

@@ -40,7 +40,7 @@ const TodoList = () => {
         <h2> Список задач</h2>
 
         {todos.length === 0 ? (
-          <p style={{marginTop: "20px"}}>Нет задач</p>
+          <p style={{ marginTop: "20px" }}>Нет задач</p>
         ) : (
           <div className="todolist">
             {todos.map((el) => (
