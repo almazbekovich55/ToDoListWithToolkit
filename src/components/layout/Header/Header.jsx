@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
-import Points from "../../../components/pages/points/Points";
+import Points from "../../../components/pages/points/Points.jsx";
 
 const Header = () => {
   return (
