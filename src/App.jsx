@@ -1,10 +1,10 @@
 import React from "react";
-import TodoList from "./components/pages/ToDoList/ToDoList.jsx";
-import DoneList from "./components/pages/DoneList/DoneList.jsx";
+import TodoList from "./components/pages/toDoList/ToDoList.jsx";
+import DoneList from "./components/pages/doneList/DoneList.jsx";
 import Points from "./components/pages/points/Points.jsx";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/layout/Header/Header.jsx";
 import Admin from "./components/pages/Admin/Admin.jsx";
+import Header from "./components/layout/Header/Header.jsx";
 
 const App = () => {
   let routes = [
